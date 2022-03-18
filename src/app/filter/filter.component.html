@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="input-group">
+        <label for="make" class="input-group-text">Make</label>
+        <select name="make" id="make" (change)="sortMake()">
+            <option value="">--Select Make--</option>
+            <option *ngFor="let make of makes" [value]="make">{{make}}</option>            
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="model" class="input-group-text">Model</label>
+        <select name="model" id="model" (change)="sortModel()">
+            <option value="">--Select Model--</option>
+            <option *ngFor="let model of model" [value]="model">{{model}}</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="year" class="input-group-text">Year</label>
+        <select name="year" id="year">
+            <option value="">--Select Year--</option>
+            <option *ngFor="let year of year" [value]="year">{{year}}</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary mx-auto d-block" (click)="search()">Search</button>
+
+</div>

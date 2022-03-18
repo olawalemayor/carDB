@@ -1,0 +1,18 @@
+<div *ngFor="let car of display()">
+    <div *ngIf="car.description" class="p-3 border rounded-2 mt-2">
+        <div class="p-3 border rounded-2 mt-2 border-secondary left-dec">
+            <div>
+                <car-images></car-images>
+            </div>
+            <div class="row" car-title>
+                <h3 class="text-danger">{{car.model}} {{car.brand}} {{year(car)}}</h3>
+            </div>
+            <div class="row" car-details>
+                <div class="content-text overflow-auto">
+                    <span class="">{{car.description}} </span>
+                </div>
+                <em class=" d-lg-none text-center"><small style="color: red;">scroll text</small></em>
+            </div>
+        </div>
+    </div>
+</div>

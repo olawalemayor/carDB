@@ -1,0 +1,7 @@
+<div *ngIf="display().car">
+    <div class="mt-2 border-secondary border rounded-2 p-2 hide-sm">
+        <h3 class="d-inline text-white">Search Result for : {{display().car.model}} {{display().car.brand}} {{display().year}}</h3>
+        <em class="display-6"></em>
+    </div>
+    <result-thumbnail></result-thumbnail>
+</div>

@@ -1,0 +1,24 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{display().images_links[1]}}" class="d-block w-100" alt="" height="350px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{display().model}} {{display().brand}} {{year(display())}}</h5>
+            </div>
+        </div>
+        <div *ngFor="let image of display().images_links" class="carousel-item">
+            <img src="{{image}}" class="d-block w-100" alt="" height="350px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{display().model}} {{display().brand}} {{year(display())}}</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

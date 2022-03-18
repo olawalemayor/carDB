@@ -5,6 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'chassisCarDB';
+
+
+  //used to manipulate contents showing when filter has not loaded
+  emptyPage(): boolean {
+    const content = document.getElementById('wrapper')
+    if(content){
+      return false
+    }
+    else{
+      return true
+    }
+  }
 }

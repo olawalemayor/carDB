@@ -1,0 +1,28 @@
+<h6 class="bg-dark text-white text-center py-1 mt-4 mb-0">ENGINES</h6>
+<div *ngFor="let engine of engine(getCar())">
+    <div class="bg-body">
+        <collapse-item>
+            <div item-title>
+                {{engineName(engine)}}
+            </div>
+            <div item-body>
+                <div class="bg-primary text-white engineSpec overflow-auto">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="engine-cell" *ngFor="let key of engineProp(engine).col1">
+                                    {{key}}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="engine-cell" *ngFor="let value of engineProp(engine).col2">
+                                    {{value}}
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </collapse-item>
+    </div>
+</div>

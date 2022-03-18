@@ -1,0 +1,19 @@
+<div id="wrapper" class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-5">
+            <car-filter [cars]="cars"></car-filter>
+            <div *ngIf="filteredCars()">
+                <car-sidebar></car-sidebar>
+            </div>
+        </div>
+
+        <div class="col-lg-7 col-md-6">
+            <div *ngIf="!filteredCars()">
+                <img [src]="adImage" class="w-100">
+            </div>
+            <div *ngIf="filteredCars()">
+                <search-result></search-result>
+            </div>
+        </div>
+    </div>
+</div>

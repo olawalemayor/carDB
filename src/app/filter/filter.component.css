@@ -1,0 +1,12 @@
+.input-group {
+    margin: .6rem 0;
+}
+
+label {
+    width: 22%;
+}
+
+select {
+    width: 78%;
+    text-align: center;
+}
