@@ -1,4 +1,8 @@
 .scroll-bg {
-    background: #0a0a0a;
-    transition: ease-in-out 3s;
+  background: #0a0a0a;
+  transition: ease-in-out 3s;
+}
+
+.brand-image {
+  width: 300px;
 }
