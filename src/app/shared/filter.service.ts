@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-const { API_PORT, API_URL } = environment;
-const endpoint = `${API_URL}:${API_PORT}/api`;
+const { API_URL } = environment;
+const endpoint = `${API_URL}/api`;
 
 @Injectable()
 export class FilterService {

@@ -4,11 +4,9 @@ import { Observable, of } from 'rxjs';
 import { Icars } from './car';
 import { environment } from '../../environments/environment';
 
-const { API_URL, API_PORT } = environment;
-
 @Injectable()
 export class CarService {
-  endpoint = `${API_URL}:${API_PORT}/api`;
+  endpoint = `${environment.API_URL}/api`;
 
   filteredCars: Icars[]; //filterd car
 
@@ -16,11 +14,12 @@ export class CarService {
 
   //update filter car
   updateFilteredCars(make: string, model: string, year: string) {
-    this.http
-      .get<Icars[]>(`${this.endpoint}/${make}/${model}/${year}`)
-      .subscribe((filteredCar) => {
-        this.filteredCars = filteredCar;
-      });
+    if (make && model && year)
+      this.http
+        .get<Icars[]>(`${this.endpoint}/${make}/${model}/${year}`)
+        .subscribe((filteredCar) => {
+          this.filteredCars = filteredCar;
+        });
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
